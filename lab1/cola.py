@@ -24,8 +24,8 @@ def fib_aux(n, a,  b):
 
 
 start = time.clock()  # Iniciando el cronometro
-print (fib(35))
+print("Resultado: "+str(fib(35)))
 end = time.clock()  # Deteniendo el cronometro
 
-print(llamadas)
-print(end-start)
+print("Llamadas recursivas: "+str(llamadas))
+print("Tiempo de ejecucion: "+str(end-start)+" segundos")
