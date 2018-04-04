@@ -24,7 +24,7 @@ def fib_aux(n, a,  b):
 
 
 start = time.clock()  # Iniciando el cronometro
-# print (fib(35))
+print (fib(35))
 end = time.clock()  # Deteniendo el cronometro
 
 print(llamadas)
