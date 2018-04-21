@@ -21,9 +21,7 @@ def insertsort(lista):
 
 
 def insertsort_aux(lista, key, i, n, newlist, llamadas):
-    if len(newlist) == n:
-        return [newlist, llamadas]
-    elif key > newlist[i] or i < 0:
+    if key > newlist[i] or i < 0:
         newlist = newlist[:i+1] + [key] + newlist[i+1:]
         if len(newlist) == n:
             return [newlist, llamadas]
@@ -33,9 +31,8 @@ def insertsort_aux(lista, key, i, n, newlist, llamadas):
     elif key <= newlist[i]:
         llamadas += 1
         return insertsort_aux(lista, key, i-1, n, newlist, llamadas)
-    else:
-        print('alv')
 
 
 sorted_100nums_by_insertsort = insertsort(lista100_numeros)
-print(sorted_100nums_by_insertsort)
+print('Ordena 100 numeros en %s segundos con %s llamadas recursivas, la lista ordenada es: \n %s' %
+      (sorted_100nums_by_insertsort[2], sorted_100nums_by_insertsort[1], sorted_100nums_by_insertsort[0]))
