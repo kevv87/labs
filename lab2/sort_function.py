@@ -8,7 +8,7 @@ lista2000_numeros = [9531, 1064, 6679, 2397, 1146, 9425, 6905, 1207, 3536, 9313,
 start = time.clock()
 lista100_numeros_ordenada = sorted(lista100_numeros)
 end = time.clock()
-print('Metodo sort')
+print('Funcion sort')
 print('Ordena 100 numeros en %s segundos, la lista ordenada es: \n%s' % (end-start, lista100_numeros_ordenada))
 print('\n')
 
