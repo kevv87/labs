@@ -33,4 +33,3 @@ end = time.clock()
 print(b)
 print(end-start)
 print (lista100_numeros)
-

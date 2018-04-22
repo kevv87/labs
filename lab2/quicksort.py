@@ -28,10 +28,11 @@ def quickSort(lista):
 
 def quickSort_aux(lista, prim, ult, llamadas):
     if prim < ult:
+        llamadas +=1
         pi = partir(lista, prim, ult)
         quickSort_aux(lista, prim, pi - 1, llamadas)
         quickSort_aux(lista, pi + 1, ult, llamadas)
-        return [lista, llamadas]
+        return [lista, lla]
 
 
 print('Ordena 100 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'

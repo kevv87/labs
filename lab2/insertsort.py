@@ -33,6 +33,6 @@ def insertsort_aux(lista, key, i, n, newlist, llamadas):
         return insertsort_aux(lista, key, i-1, n, newlist, llamadas)
 
 
-sorted_100nums_by_insertsort = insertsort(lista100_numeros)
+sorted_100nums_by_insertsort = insertsort(lista2000_numeros)
 print('Ordena 100 numeros en %s segundos con %s llamadas recursivas, la lista ordenada es: \n %s' %
       (sorted_100nums_by_insertsort[2], sorted_100nums_by_insertsort[1], sorted_100nums_by_insertsort[0]))
