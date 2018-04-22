@@ -7,6 +7,8 @@ llamadas = 0
 
 
 def minIndex(a, i, j):
+    global llamadas
+    llamadas += 1
     if i == j:
         return i
     k = minIndex(a, i + 1, j)
@@ -35,7 +37,7 @@ start = time.clock()
 selectSort(lista100_numeros)
 end = time.clock()
 print('Ordena 100 numeros en %s segundos, hace %s llamadas recursivas, la lista ordenada es:\n%s \n' %
-      (start-end, llamadas, lista100_numeros))
+      (end-start, llamadas, lista100_numeros))
 llamadas = 0
 
 
@@ -43,6 +45,6 @@ start = time.clock()
 selectSort(lista500_numeros)
 end = time.clock()
 print('Ordena 500 numeros en %s segundos, hace %s llamadas recursivas, la lista ordenada es:\n%s \n' %
-      (start-end, llamadas, lista500_numeros))
+      (end-start, llamadas, lista500_numeros))
 llamadas = 0
 

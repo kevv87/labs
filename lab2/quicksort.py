@@ -37,7 +37,6 @@ def quickSort_aux(lista, prim, ult, llamadas):
 
 lista100_numeros_ordenada = quickSort(lista100_numeros)
 lista500_numeros_ordenada = quickSort(lista500_numeros)
-lista1000_numeros_ordenada = quickSort(lista1000_numeros)
 lista2000_numeros_ordenada = quickSort(lista2000_numeros)
 
 print('Quicksort')
