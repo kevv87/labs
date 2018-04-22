@@ -29,10 +29,30 @@ def quickSort(lista):
 def quickSort_aux(lista, prim, ult, llamadas):
     if prim < ult:
         pi = partir(lista, prim, ult)
+        llamadas += 2
         quickSort_aux(lista, prim, pi - 1, llamadas)
         quickSort_aux(lista, pi + 1, ult, llamadas)
         return [lista, llamadas]
 
 
+lista100_numeros_ordenada = quickSort(lista100_numeros)
+lista500_numeros_ordenada = quickSort(lista500_numeros)
+lista1000_numeros_ordenada = quickSort(lista1000_numeros)
+lista2000_numeros_ordenada = quickSort(lista2000_numeros)
+
+print('Quicksort')
 print('Ordena 100 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
-      % (quickSort(lista100_numeros)[2], quickSort(lista100_numeros)[1], quickSort(lista100_numeros)[0]))
+      % (lista100_numeros_ordenada[2], lista100_numeros_ordenada[1], lista100_numeros_ordenada[0]))
+print('\n')
+
+print('Ordena 500 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
+      % (lista500_numeros_ordenada[2], lista500_numeros_ordenada[1], lista500_numeros_ordenada[0]))
+print('\n')
+
+print('Ordena 1000 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
+      % (lista1000_numeros_ordenada[2], lista1000_numeros_ordenada[1], lista1000_numeros_ordenada[0]))
+print('\n')
+
+print('Ordena 2000 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
+      % (lista2000_numeros_ordenada[2], lista2000_numeros_ordenada[1], lista2000_numeros_ordenada[0]))
+print('\n')
