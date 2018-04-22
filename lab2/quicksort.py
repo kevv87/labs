@@ -49,10 +49,6 @@ print('Ordena 500 numeros en %s segundos, hace %s llamadas recursivas la lista o
       % (lista500_numeros_ordenada[2], lista500_numeros_ordenada[1], lista500_numeros_ordenada[0]))
 print('\n')
 
-print('Ordena 1000 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
-      % (lista1000_numeros_ordenada[2], lista1000_numeros_ordenada[1], lista1000_numeros_ordenada[0]))
-print('\n')
-
 print('Ordena 2000 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
       % (lista2000_numeros_ordenada[2], lista2000_numeros_ordenada[1], lista2000_numeros_ordenada[0]))
 print('\n')

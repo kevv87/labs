@@ -17,11 +17,6 @@ end = time.clock()
 print('Ordena 500 numeros en %s segundos, la lista ordenada es: \n%s' % (end-start, lista500_numeros_ordenada))
 print('\n')
 
-start = time.clock()
-lista1000_numeros_ordenada = sorted(lista1000_numeros)
-end = time.clock()
-print('Ordena 1000 numeros en %s segundos, la lista ordenada es: \n%s' % (end-start, lista1000_numeros_ordenada))
-print('\n')
 
 start = time.clock()
 lista2000_numeros_ordenada = sorted(lista2000_numeros)
