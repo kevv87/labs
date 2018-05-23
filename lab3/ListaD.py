@@ -42,15 +42,24 @@ class ListaDoble:
             nodo.prev = save
             nodo = nodo.next
 
+    def toList(self):
+        nodo = self.head
+        listaPy = []
+        while nodo!= None:
+            listaPy.append(nodo.valor)
+            nodo = nodo.next
+        return listaPy
+
+
+    def dele(self, valor):
+        nodo = self.head
+
 
 def prueba():
     lista = ListaDoble()
     lista.appe(12)
     lista.appe(15)
     lista.appe(13)
-    lista.printL()
-    lista.reve()
-    lista.printL()
-    print(lista.tail.prev)
-
+    lista.toList()
+    print(lista.toList())
 prueba()
