@@ -36,12 +36,37 @@ class ListaDoble:
     def reve(self):
         nodo = self.tail
         while nodo != None:
-            print('in')
-            save = nodo.next
             nodo.next = nodo.prev
-            nodo.prev = save
+            nodo = nodo.next
+        save = self.head
+        self.head = self.tail
+        self.tail = save
+        self.norm()
+
+    def norm(self):
+        nodo = self.head
+        nodo.prev = None
+        while nodo.next != None:
+            nodo.next.prev = nodo
             nodo = nodo.next
 
+    def dele(self, ele):
+        nodo = self.head
+        cont = 0
+        while nodo != None and cont == 0:
+            if nodo.value() == ele and nodo == self.head:
+                self.head = nodo.next
+                self.largo -= 1
+                cont += 1
+            elif nodo.next.value() == ele and nodo.next == self.tail:
+                self.largo -= 1
+                self.tail = nodo
+                nodo.next = None
+                cont += 1
+            elif nodo.next.value() == ele:
+                nodo.next = nodo.next.next
+                cont += 1
+            nodo = nodo.next
 
 def prueba():
     lista = ListaDoble()
@@ -51,6 +76,6 @@ def prueba():
     lista.printL()
     lista.reve()
     lista.printL()
-    print(lista.tail.prev)
+
 
 prueba()
