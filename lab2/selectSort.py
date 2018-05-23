@@ -8,6 +8,8 @@ llamadas = 0
 
 
 def minIndex(a, i, j):
+    global llamadas
+    llamadas += 1
     if i == j:
         return i
     k = minIndex(a, i + 1, j)

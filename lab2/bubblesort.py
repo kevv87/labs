@@ -34,5 +34,7 @@ def bubblesort_aux(lista, i, n, cambios, llamadas):
         llamadas += 1
         return bubblesort_aux(lista, i+1, n, cambios, llamadas)
 
+
+ordenada = bubblesort(lista100_numeros)
 print('Ordena 100 numeros en %s segundos, hace %s llamadas recursivas la lista ordenada es: \n%s'
-      % (bubblesort(lista100_numeros)[2], bubblesort(lista100_numeros)[1], bubblesort(lista100_numeros)[0]))
+      % (ordenada[2], ordenada[1], ordenada[0]))
