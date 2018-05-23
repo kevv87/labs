@@ -43,6 +43,14 @@ class ListaDoble:
         self.tail = save
         self.norm()
 
+    def toList(self):
+        nodo = self.head
+        listaPy = []
+        while nodo!= None:
+            listaPy.append(nodo.valor)
+            nodo = nodo.next
+        return listaPy
+
     def norm(self):
         nodo = self.head
         nodo.prev = None
